@@ -19,7 +19,8 @@ try:
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
-except:
+except Exception as e:
+    print(e)
     os.system("python3 restarter")
 
 #executin js code
