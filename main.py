@@ -7,7 +7,7 @@ import os
 from keep_alive import keep_alive
 
 
-page_number=1
+page_number=2
 url=f'https://api.openloot.com/v2/market/listings?gameId=56a149cf-f146-487a-8a1c-58dc9ff3a15c&onSale=true&page={page_number}&sort=name%3Aasc'
 current_prices={}
 
@@ -19,8 +19,7 @@ try:
     chrome_options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
-except Exception as e:
-    print(e)
+except:
     os.system("python3 restarter")
 
 #executin js code
